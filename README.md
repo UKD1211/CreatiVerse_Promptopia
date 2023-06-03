@@ -36,10 +36,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Snapshots
 
-
-<img src="public/assets/images/Screenshot (613).png" width="300">
-<img src="public/assets/images/Screenshot (612).png" width="300">
-<img src="public/assets/images/Screenshot (614).png" width="300">
+<img src="public/assets/images/Screenshot (653).png" width="300">
+<img src="public/assets/images/Screenshot (647).png" width="300">
+<img src="public/assets/images/Screenshot (650).png" width="300">
+<img src="public/assets/images/Screenshot (651).png" width="300">
+<img src="public/assets/images/Screenshot (654).png" width="300">
+<img src="public/assets/images/Screenshot (648).png" width="300">
+<img src="public/assets/images/Screenshot (649).png" width="300">
 
 
 
