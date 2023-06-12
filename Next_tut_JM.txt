@@ -1,0 +1,169 @@
+1.what does next js has that react doesnot?
+//1)rendering:react js user use client side while next js use server rendering.in next js you can choose to use the UI rendering in the client side and also in server side according to your need.
+---------------------------------
+2.The main question is what is client side and server side rendering?and which is better?
+//client side:: clinet side rendering or browser side rendering happens in the clients device.
+when a user request a web page, the server sends a basic html and a js script , the browser then download and executes the js code which leads to the rendering to the components and finally the display of the website. 
+//Server side:: it involves rendering the webpage on server,before transmitting it to the client's device.
+when a user request a page the server ,the server process the request and renders the components in the servers side ,then the server sends back the fully rendered webpage to the clients browser with enabling immidiate display.
+----------------------------------
+this distinction highlights an essential aspect of webdev 
+3.SEO:: Search Engine Optimization  
+//it can suffer orface various difficulties while rendering the webpages in the clients side.
+
+BUT by using the NextJS this issue is fully solved by sending Pre-rendered code directly to the client.
+
+this enables:
+>>Easy crawling 
+>>Indexing 
+leading to improved SEO.
+----------------------------------
+4.But why are giving much attention to the SEO?
+//seo is very crucial for optimizing a website's visibility and ranking in search engine results.
+by this we can gain 
+>>Increment in organic Traffic.
+>>Enhanced user experience.
+>>competitive advantage.
+>>credibility & trustworthiness.
+-----------------------------------
+5.The one of the best Nextjs feature>>>
+//ROUTING in NextJS:: it uses a file-based routing system.
+the routing is handled by the file system.
+in each directory the app becomes route and the folder names become route path 
+like in app there is a folder named about u can access that folder from 
+`https://localhost:3000/about`.
+no need complex packages , u can create files for the routes u want and open them within your app.
+-----------------------------------
+6.API Routes:: enabling the creation of serverless functions to handle API requests.
+it allows us to build and deploy APIs
+>>without managing server infrastructure.
+>>worrying about scaling their server as traffic increases.
+-----------------------------------
+with this we can create API end points.
+by creating a simple fine `route.js`
+within a specific folder in app
+----------------------------------
+7.Code Splitting:: this reduces the initial load time of a website.
+but in react the codesplitting process is manual and also complicated
+but in next js its fully automatic.
+//it split pages into seperate chunks.
+-----------------------------------
+8.so the main functions are>>>
+1)Routing
+2)Code Splitting
+3)SEO
+4)Rendering automatically.
+-----------------------------------
+/////NOW lets start >>>
+1)in vs code terminal we have to type
+`npx create-next-app@latest ./`
+it will create the app in the latest folder.
+
+2)we have to make yes for the app routing.
+------------------------/
+////Layout.js
+the app is the most imp folder there 
+and the layout,page there is the most imp files for now.
+//The `layout.js` file is the main entry point of our application.
+in all of the comp are wraped with in the file will displayed as the children 
+as an example what we will write in this page will be displayed on every route page you create.
+this unique file enables to personalize the behabiour of the application by providing a common layout or template for all of the pages.
+
+//it simply takes all the children 
+and u can place some of the components that u want to reuse all over the routs.
+
+//IN A nutshell:: if you want to add something that should stay consistant across all the routes such as Navbar,Footer or any other thing you should place it in layout.js file. 
+-------------------/
+the purpose of the `page.js` file is simply it shows us the route of the home page of this application..
+`Localhost:3000/`
+-------------------/
+In nextjs its always a server side rendering,and in react its a client
+side rendering butif we want to change it for client side in nextjs we have to use 
+`'use client';`to turn it into a client side component.
+in above of the `page.js`
+-----------------------/
+whenever u utilizing state or hooks like `useStates()`in react or other client side management solutions it is important to declare the component 
+as a clientside component. State management in the react is premierly managed in the client side.
+
+//so if u are using any of the react hooks (useState,useEffect etc) u need to use the 'use client' at the top otherwise u gonna run into errors.
+--------------------------/
+9.When should i use server components and when should i transform them in the client ones?
+//me until the client component needed keep doing what u are doing in server component if there is any error due to that you just transform the server component into the client component.
+when u should client side components
+>>when u have some inter activity or event listeners(`onClick(),onChange()` etc)
+>>use state and Lifecycle Effects(`useState(),useEffect()` etc)
+>>ude any custom hooks that depends on state,effects or browser-only APIs.
+
+Let Next do what its is doing then if u want to add some react capabilities like usState,interactivity,useEffect add 'use client'on top
+---------------------------------------
+10.Nested Routing::
+Here the routing is fully filed based
+means u create new folders and your routing is ready..
+lets say you want to create /user route
+>>simply navigate to the app folder 
+>>create a folder named user
+>>within it simply create a new file `page.js`(this file is showed as `Localhost:3000/user`)
+mean actually we are creating a nested route..
+--we will enter to the nested route paths 
+>>again if we create a folder `post` inside that user folder and create a new file post.js there then we can see the post file/folder
+`Localhost:3000/user/post`  
+this is as simple as that.......
+---------------------------------------
+11.Dynamic Routing::[postId] we can add another folder but dynamically named as following for routes..
+---------------------------------------
+12.Now lets create a new `layout.js` file inside the sub-folder as well in post, the purpose of this file/layout is to allow for the sharing of the UI components between routes.
+lets think we wanna create a component that we want to reuse only on pages that are within the `post` folder 
+now u can easily do that,
+you can also add a new loader for each of the sub pages..
+loading.js,
+----------------------------------------
+13.Now if there is any type of error to handle it down u have to gracefully handle it down..
+then u have to create a error.js file.(use client)
+----------------------------------------
+14.DATA fetching::
+//1.Server Side Rendering(SSR)
+//2.Static Site Generation(SSG)(it basically cache the datas that we fetch)
+//3.Incremental Static Generation(ISR)
+----------------------------------------
+15.NextJS allows applications full-stack.
+the following example in the vid shows you how to create an expressJS application.
+define the route and get request for the users and then it executes the codes and then return.. the users.
+-----/
+dont create routes right within right the app folder.(for the backend purpose).
+to keep the code clean keep all the backend related logic in api end point 'api' folder.(we will come here later)
+----------------------------------------
+16.in NextJS we can define Metadata in tow ways: Static snd Dynamic.
+-----------------------------------------
+HERE WE GO>> we go through client and server components,routing,layout,loading,errors,data fetching,and api endpoints.....
+------------------------------------------
+------------------------------------------
+PROMPTOPIA
+
+1)create open folders for mongodb and mongoose server.
+2)then create an utils folder(for utility functions) and  then create and `.env`(enviornment variables) file there in this file we can store secure keys..
+3)then create `page.jsx` in the app folder, it is the new unique file 
+thats going to render our home page.
+4)then most imp file we need to create is `layout.jsx`
+5)then we have to remove the import react tags from above 
+6)`import '@styles/globals.css';` in the layout.jsx file to apply the styles all over the pages.
+7)[export const metadata = {
+    title: "Promptopia",
+    description: 'Discover & Share AI Prompts'
+
+}](metadata is simply data about data.  It means it is a description and context of the data. It helps to organize, find and understand data.)
+//whereever u see any type of '_' in any style element u should understand that is coming from our own styling `global.css`
+[.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+}]
+8)[  const [providers, setProviders] = useState(null);
+
+  useEffect(() => {
+    const setProviders = async () => {
+      const response = await getProviders();
+
+      setProviders(response);
+    }
+    setProviders();
+  }, [])  ] it will allow us to sign in using google and next-auth.(1:48:49)
+
+ 
